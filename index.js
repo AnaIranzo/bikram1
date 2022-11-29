@@ -5,10 +5,10 @@ let booleano2 = true;
 const PI = 3.14
 const TAU = 2 * PI
 
-let booleanoAnd = booleano1 === booleano2
+let booleanoAnd = booleano1 && booleano2
 let booleanoNot = !booleano2
 let booleanoMix0
-booleanoMix0 = (booleano1 || booleano2 && (booleano1 || (booleano1 != booleano2)))
+booleanoMix0 = (booleano1 || booleano2 && (booleano1 || (booleano1 && !booleano2)))
 
 
 
@@ -41,8 +41,8 @@ for(let i = 0; i < 11; i++){
 
 let sumaPares = 0
 for (let i = 0; i < 10; i++) {
-    if(i %2  == 0){
-        sumaPares = sumaPares + i
+    if(i % 2  == 0){
+        sumaPares += i
     }else{
         continue
     }
@@ -56,13 +56,13 @@ const MiNombre = 'Ana'
 
 const MiNumeroFav = 13
 
-let booleanoOr = booleano1 === booleano2
+let booleanoOr = booleano1 || booleano2
 
 let booleanoMix1 = (booleano1 &&(TAU/2 === PI)) || (variableValorNumerico >= MiNumeroFav)
 
-let seisNoEsNueve = 6 != 9
+let seisNoEsNueve = 6 !== 9
 
-let booleanoMix2 = variableValorNumerico > 0 ||  -(MiNumeroFav*TAU)
+let booleanoMix2 = variableValorNumerico > 0 || variableValorNumerico < -(MiNumeroFav*TAU)
 
 let valorSuma = MiNumeroFav + variableValorNumerico
 
@@ -82,14 +82,14 @@ let preI = 0
 let preJ = 0
 for (let i = 0; i < 11; i++) {
     
-    preI = preI + ++preJ
+    preI += ++preJ
     
 }
 
 let sumaImpares = 0
 for (let i = 0; i < 10; i++) {
-    if(i %2  !== 0){
-        sumaImpares = sumaImpares + i
+    if(i % 2  !== 0){
+        sumaImpares +=  + i
     }else{
         continue
     }
